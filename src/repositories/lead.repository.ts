@@ -2,7 +2,7 @@ import Lead, { LeadDocument } from "../models/lead.model";
 
 
 async function createLead(leadData: LeadDocument): Promise<LeadDocument> {
-  return Lead.create(leadData);
+  return Lead.create({data:leadData});
 }
 
 async function getLeads(): Promise<LeadDocument[]> {
