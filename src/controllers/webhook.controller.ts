@@ -15,6 +15,7 @@ router.post('/', async (req: Request, res: Response) => {
         console.log("WEBHOOK_update", JSON.stringify(newLead, null, 2));
         res.json(newLead);
     } catch (error) {
+        console.log("WEBHOOK_error", JSON.stringify(error, null, 2));
         res.status(500).json({ error: 'Failed to create lead' });
     }
 });
